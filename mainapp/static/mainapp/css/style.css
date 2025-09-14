@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background-color: pink;
+    font-family: 'Philosopher', sans-serif;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightpink;
+    padding: 15px 30px;
+    border-bottom: 3px solid mediumvioletred;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;                     /* вмикаємо flexbox */
+    justify-content: space-around;     /* рівний розподіл */
+    align-items: center;
+}
+
+aside ul a {
+    display: inline-block;
+    text-decoration: none;
+    color: mediumvioletred;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;          /* плавний ефект */
+}
+
+aside ul a:hover {
+    color: indigo;
+    transform: scale(1.10);             /* трохи збільшується */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightpink;
+    padding: 10px 30px;
+    border-top: 3px solid mediumvioletred;
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 500;
+    color: mediumvioletred;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

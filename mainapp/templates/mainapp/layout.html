@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'mainapp/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <ul>
+            <li><a href=""><i class="fa-solid fa-house-chimney-window"></i>Головна</a></li>
+            <li><a href=""><i class="fa-solid fa-earth-americas"></i>Про локації</a></li>
+            <li><a href=""><i class="fa-solid fa-location-dot"></i>Додай своє місце</a></li>
+        </ul>
+    </aside>
+    <footer>
+        Сайт створений 14.09.25 Михайлик Ольгою
+    </footer>
+    {% block body %} {% endblock %}
+</body>
+</html>
