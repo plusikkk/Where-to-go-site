@@ -13,9 +13,18 @@
 <body>
     <aside>
         <ul>
-            <li><a href=""><i class="fa-solid fa-house-chimney-window"></i>Головна</a></li>
-            <li><a href=""><i class="fa-solid fa-earth-americas"></i>Про локації</a></li>
-            <li><a href=""><i class="fa-solid fa-location-dot"></i>Додай своє місце</a></li>
+            <li>
+                <a href="{% url 'home' %}">
+                    <i class="fa-solid fa-house-chimney-window"></i>Головна</a>
+            </li>
+            <li>
+                <a href="{% url 'list' %}">
+                    <i class="fa-solid fa-earth-americas"></i>Про локації</a>
+            </li>
+            <li>
+                <a href="{% url 'addlocation' %}">
+                    <i class="fa-solid fa-location-dot"></i>Додай своє місце</a>
+            </li>
         </ul>
     </aside>
     <footer>

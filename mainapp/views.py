@@ -5,4 +5,7 @@ def main(request):
     return render(request, 'mainapp/main.html')
 
 def listpage(request):
-    return HttpResponse("hello from list page")
+    return render(request, 'mainapp/listpage.html')
+
+def addplace(request):
+    return render(request, 'mainapp/addplace.html')

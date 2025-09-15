@@ -1,4 +1,13 @@
 {% extends 'mainapp/layout.html' %}
+{% load static %}
 
 {% block title %} Main page {% endblock %}
-{% block body %}  {% endblock %}
+{% block body %}
+    <div class="main-page">
+    <h1>Куди піти сьогодні?</h1>
+    <img src="{% static 'mainapp/img/sacura.jpg' %}" alt="">
+    <p>Ласкаво просимо! Це - ваш персональний помічник для вибору куди піти сьогодні. Тут ви можете дивитися уже наявні локації або ж додати свої. Коли ви натисните кнопку нижче, сайт підкаже вам місце для чудового відпочинку з друзями або наодинці.</p>
+    <h3>Гарного відпочинку!</h3>
+    <button>Куди піти?</button>
+    </div>
+{% endblock %}

@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-color: pink;
     font-family: 'Philosopher', sans-serif;
+    text-align: center;
 }
 
 aside {
@@ -51,4 +52,54 @@ footer {
     font-weight: 500;
     color: mediumvioletred;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-page h1 {
+    color: mediumvioletred;
+    font-size: 40px;
+    margin: 60px 0 20px 0;
+}
+
+.main-page img {
+    width: 66%;
+    border-radius: 15px; /* заокруглені краї */
+    border: 2px solid mediumvioletred; /* тонка рамка */
+    margin: 20px auto;
+    display: block;
+}
+
+.main-page p {
+    max-width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: lightpink;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+.main-page h3 {
+    color: mediumvioletred;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.main-page button {
+    background-color: mediumvioletred;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 30px;
+    margin: 5px 0 50px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.main-page button:hover {
+    background-color: indigo;
+    transform: scale(1.08);
 }
