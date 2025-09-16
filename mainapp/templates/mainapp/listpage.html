@@ -1,4 +1,24 @@
 {% extends 'mainapp/layout.html' %}
 
-{% block title %} Main page {% endblock %}
-{% block body %}  {% endblock %}
+{% block title %} List page {% endblock %}
+{% block body %}
+    <div class="list-page">
+    <h1>Список місць</h1>
+    <ul>
+    {% for place in locations %}
+        <li>
+            <strong>{{ place.title }}</strong> ({{ place.typeplace }}) —
+            {{ place.rating }}<i class="fa-solid fa-star"></i> <br>
+            {{ place.text|truncatewords:10 }}
+            {% if place.location %}
+                — {{ place.location }}
+            {% else %}
+                — Secret place<i class="fa-solid fa-eye-slash"></i>
+            {% endif %}
+        </li>
+    {% empty %}
+        <li>Поки немає жодного місця.</li>
+    {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

@@ -1,4 +1,32 @@
 {% extends 'mainapp/layout.html' %}
 
-{% block title %} Main page {% endblock %}
-{% block body %}  {% endblock %}
+{% block title %} Add page {% endblock %}
+{% block body %}
+    <div class="add-page">
+    <h1>Додайте свою локацію тут</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="id_photo">Фото:</label>
+        {{ form.photo }}
+
+        <label for="id_title">Назва:</label>
+        {{ form.title }}
+
+        <label for="id_typeplace">Тип місця:</label>
+        {{ form.typeplace }}
+
+        <label for="id_location">Локація:</label>
+        {{ form.location }}
+
+        <label for="id_rating">Рейтинг (1-5<i class="fa-solid fa-star"></i>):</label>
+        {{ form.rating }}
+
+        <label for="id_date">Дата створення відгуку:</label>
+        {{ form.date }}
+
+        <label for="id_text">Опис:</label>
+        {{ form.text }}
+        <button type="submit">Зберегти локацію</button>
+    </form>
+    </div>
+{% endblock %}
