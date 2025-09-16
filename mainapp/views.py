@@ -1,6 +1,5 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.urls import reverse
+import random
 
 from .forms import LocationsForm
 
@@ -30,3 +29,22 @@ def addplace(request):
 def listpage(request):
     places = request.session.get('places', [])
     return render(request, 'mainapp/listpage.html', {'locations': places})
+
+def place_detail(request, place_id):
+    places = request.session.get('places', [])
+    try:
+        place = places[place_id]
+    except IndexError:
+        place = None
+    return render(request, 'mainapp/places.html', {'place': place})
+
+def random_place(request):
+    places = request.session.get('places', [])
+    if not places:
+        return redirect('list')
+    chosen_index = random.choices(
+        range(len(places)),
+        weights=[p['rating'] for p in places],
+        k=1
+    )[0]
+    return redirect('place_detail', place_id=chosen_index)

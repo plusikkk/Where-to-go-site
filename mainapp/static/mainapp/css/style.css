@@ -20,8 +20,8 @@ aside ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;                     /* вмикаємо flexbox */
-    justify-content: space-around;     /* рівний розподіл */
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -31,12 +31,12 @@ aside ul a {
     color: mediumvioletred;
     font-weight: 600;
     font-size: 18px;
-    transition: all 0.3s ease;          /* плавний ефект */
+    transition: all 0.3s ease;
 }
 
 aside ul a:hover {
     color: indigo;
-    transform: scale(1.10);             /* трохи збільшується */
+    transform: scale(1.10);
 }
 
 footer {
@@ -62,8 +62,8 @@ footer {
 
 .main-page img {
     width: 66%;
-    border-radius: 15px; /* заокруглені краї */
-    border: 2px solid mediumvioletred; /* тонка рамка */
+    border-radius: 15px;
+    border: 2px solid mediumvioletred;
     margin: 20px auto;
     display: block;
 }
@@ -117,7 +117,7 @@ footer {
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: left; /* щоб label і input виглядали охайно */
+    text-align: left;
 }
 
 .add-page label {
@@ -166,7 +166,6 @@ footer {
     transform: scale(1.05);
 }
 
-/* ===== Сторінка зі списком місць ===== */
 .list-page h1 {
     color: mediumvioletred;
     margin: 80px 0 30px 0;
@@ -203,5 +202,50 @@ footer {
     color: gold;
 }
 .list-page li i.fa-eye-slash {
+    color: gray;
+}
+
+.detail-page {
+    max-width: 800px;
+    margin: 100px auto 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.detail-page h1 {
+    color: mediumvioletred;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.detail-page img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;           
+    border-radius: 12px;
+    border: 2px solid mediumvioletred;
+    margin-bottom: 20px;
+}
+
+.detail-page p {
+    font-size: 18px;
+    margin: 12px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.detail-page strong {
+    color: mediumvioletred;
+}
+
+.detail-page i.fa-star {
+    color: gold;
+}
+
+.detail-page i.fa-eye-slash {
     color: gray;
 }
