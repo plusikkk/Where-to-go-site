@@ -1,4 +1,28 @@
 {% extends 'mainapp/layout.html' %}
+{% load static %}
 
-{% block title %} Main page {% endblock %}
-{% block body %}  {% endblock %}
+{% block title %} List page {% endblock %}
+{% block body %}
+    <div class="list-page">
+    <h1>Список місць</h1>
+    <ul>
+    {% for place in locations %}
+        <li>
+            <img src="{% static 'mainapp/img/wp.jpg'%}">
+            <a href="{% url 'place_detail' forloop.counter0 %}">
+                <strong>{{ place.title }}</strong>
+            </a>
+            ({{ place.typeplace }}) — {{ place.rating }}<i class="fa-solid fa-star"></i> <br>
+            {{ place.text|truncatewords:10 }}
+            {% if place.location %}
+                — {{ place.location }}
+            {% else %}
+                — Secret place <i class="fa-solid fa-eye-slash"></i>
+            {% endif %}
+        </li>
+    {% empty %}
+        <li>Поки немає жодного місця.</li>
+    {% endfor %}
+    </ul>
+    </div>
+{% endblock %}

@@ -20,8 +20,8 @@ aside ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;                     /* вмикаємо flexbox */
-    justify-content: space-around;     /* рівний розподіл */
+    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -31,12 +31,12 @@ aside ul a {
     color: mediumvioletred;
     font-weight: 600;
     font-size: 18px;
-    transition: all 0.3s ease;          /* плавний ефект */
+    transition: all 0.3s ease;
 }
 
 aside ul a:hover {
     color: indigo;
-    transform: scale(1.10);             /* трохи збільшується */
+    transform: scale(1.10);
 }
 
 footer {
@@ -62,8 +62,8 @@ footer {
 
 .main-page img {
     width: 66%;
-    border-radius: 15px; /* заокруглені краї */
-    border: 2px solid mediumvioletred; /* тонка рамка */
+    border-radius: 15px;
+    border: 2px solid mediumvioletred;
     margin: 20px auto;
     display: block;
 }
@@ -102,4 +102,150 @@ footer {
 .main-page button:hover {
     background-color: indigo;
     transform: scale(1.08);
+}
+
+.add-page h1 {
+    color: mediumvioletred;
+    margin: 80px 0 20px 0;
+    font-size: 32px;
+}
+
+.add-page form {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    background-color: #ffe6f0;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.add-page label {
+    display: block;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+    color: mediumvioletred;
+}
+
+.add-page input,
+.add-page textarea,
+.add-page select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.add-page input:focus,
+.add-page textarea:focus,
+.add-page select:focus {
+    border-color: mediumvioletred;
+    outline: none;
+    box-shadow: 0 0 5px rgba(199, 21, 133, 0.5);
+}
+
+.add-page button {
+    background-color: mediumvioletred;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.add-page button:hover {
+    background-color: indigo;
+    transform: scale(1.05);
+}
+
+.list-page h1 {
+    color: mediumvioletred;
+    margin: 80px 0 30px 0;
+}
+
+.list-page ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+}
+
+.list-page li {
+    background: #fff;
+    border: 2px solid mediumvioletred;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.list-page li:hover {
+    transform: scale(1.02);
+}
+
+.list-page li strong {
+    font-size: 20px;
+    color: mediumvioletred;
+}
+
+.list-page li i.fa-star {
+    color: gold;
+}
+.list-page li i.fa-eye-slash {
+    color: gray;
+}
+
+.detail-page {
+    max-width: 800px;
+    margin: 100px auto 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.detail-page h1 {
+    color: mediumvioletred;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.detail-page img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;           
+    border-radius: 12px;
+    border: 2px solid mediumvioletred;
+    margin-bottom: 20px;
+}
+
+.detail-page p {
+    font-size: 18px;
+    margin: 12px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.detail-page strong {
+    color: mediumvioletred;
+}
+
+.detail-page i.fa-star {
+    color: gold;
+}
+
+.detail-page i.fa-eye-slash {
+    color: gray;
 }
